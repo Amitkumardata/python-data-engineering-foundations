@@ -1,0 +1,93 @@
+# Notebook 01: Data Discovery & Validation
+
+Project: Customer LTV Prediction & RFM Segmentation 
+Phase: Day 1 Scoping & data discovery
+Author: AMIT KUMAR (DATA ANALYST)
+Date: 2026-06-02
+
+# OBJECTIVE:
+1. Load and inspect row dataset 
+2. validate schema against data dictionary
+3. Generate first -pass data quality report (Cleaning)
+4. Identify critical data issues before EDA 
+5. Document all observation in markedown cells
+
+Rule:** This notebook is READ-ONLY on the raw data. We observe and document only.
+
+# Environment Setup
+
+import the libararies 
+pandas
+numpy
+warning
+warning.filterwarnings
+
+# Display setting:
+pd.set_option('display.max_columns',50),
+pd.set_option('dosplay.max_rows',100),
+pd.set_option('display.float_format')
+
+# Paths
+"RAW_DATA_PATH = '../data/raw/online_retail_II.xlsx'\n",
+"PROCESSED_PATH = '../data/processed/
+"print('Environment ready ✅')"
+
+## 1. Load Dataset:
+"The dataset has tow sheets - we'll load both and concatenate
+ **Download:** kaggle `online_retail_II.xlsx` in `data/raw/`  \n",
+
+# Load both sheet:
+df_09 = pd.read_excel(RAW_DATA_PATH, sheet_name='Year 2009-2010', dtype={'Customer ID': str})
+df_10 = pd.read_excel(RAW_DATA_PATH, sheet_name='Year 2010-2011', dtype={'Customer ID': str})
+    
+# Concatenate:
+df_row= pd.concat([df_09,df_10],ingnor_index=True)
+
+## 2. Schema Validation:
+# Basic shape and types
+( info() head() describe() tail() )
+
+## 3 Data quality report:
+# Find missing value: isnull().sum() | len(row_data) | misisng % | unique() value
+pritn("data quality report")
+
+# Cancellations:
+# Negative quantities= ['quantity']<0
+# zero price items=  ['price']==0
+# Non standard stockcode= df_row['stockcode'].isin(non_product_codes]
+# Data Range= pd.to_datetime['invoice_Date'].min , max
+# Countries= ['country'].unique()
+# unique customer= ['customer_id'].notna().sum()
+
+## 4 Observation & Decisions:
+# Instruction what makes your notebook teel a story not just code:
+
+# What I found here:
+* Missing Customer IDs: Approx. 77% of rows have no customer identifiers
+* Data range confirmed: Data spans from 2009-12-01 to 2011-12-09 12
+* Geography CONCENTRATION: 70 % of transactions from the United Kingdom
+* Negative quantity: Negative quantity rows: 0
+
+### Questions for stakeholder:
+1. Are zero price items has intentional (sample/gift) or data error?
+2. should we include international customer or UK only ?
+3. Is there a more recent dataset available for validation?
+
+## 5. Save Validated Metadata:
+# Save the quality report
+quality_report.to_csv('../data/processed/data_quality_report.csv')
+df_raw.sample(1000, random_state=42).to_csv('../data/processed/raw_sample_1000.csv', index=False)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
