@@ -1,2 +1,2 @@
 # python-data-engineering-foundations
-python-data-engineering-foundations
+week-01-core-python/
