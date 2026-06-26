@@ -1,0 +1,38 @@
+import logging
+
+# configure logging:
+
+logging=basicConfig(
+(level=logging.info,
+format= "%(levelname)s:%(message)s"
+)
+
+customers = [
+    {"customer_id": 1, "name": "Aarav", "email": "aarav@example.com", "age": "28"},
+    {"customer_id": 2, "name": "Meera", "email": "", "age": "abc"},
+    {"customer_id": 3, "name": "Kabir", "email": "kabir@example.com", "age": "17"},
+]
+
+valid_customer=[]
+invalid_customer=[]
+
+logging.info("data start processing")
+
+for customer in customers:
+       try:
+         if not email:
+            raise valueError(" email is empty")
+         age=int(customer["age"])
+         if age<18:
+            raise ValuseError(f" {age} is below 18)
+            value_customers.append(cust)
+            logging.info("f"success {name}")
+            except value as e:
+            
+# final summary:
+logging.info("Final summary finished")
+print("final summary")
+print("f valid customer count:{len(valid_customers)}")
+
+
+   
