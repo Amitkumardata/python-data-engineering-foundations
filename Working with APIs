@@ -1,0 +1,214 @@
+Project: user API extractor:
+
+Why This matters:
+In a real workplace, an API pipeline might run every morning to pull new sales, customer, product, or
+event data into a database or data warehouse. The script must be reliable, readable, and
+easy to debug when something fails.
+This project focus on those production habit early:
+
+Today I will cover the Working data with API
+1. To call the api for data request: request.get()
+2. Check the status before moving into json: response.raise_code_status 
+3. Move from json file into python for pandas: response.json() 
+4. Use error handling to avoid the error message by Try/ except/ finally/ with
+5. Use logging for info/ warning/ error/ 
+
+API used: This project use local JSONplaceholder for test APIs 
+
+import json
+import logging
+import requests
+from pathline import path
+
+# logging configration and debug
+
+logging.basicConfig(
+level=logging.INFO,
+format="%(levelname)s:%(message)s"
+)
+
+
+Api url= "http://jsonplaceholder.typicode.com/users"
+logging.info("Api start processing")
+
+def fetch_user(url):
+requests.get()
+# check the status:
+
+resppnse.raise_code_status()
+
+# convert json into python
+return response.json()
+
+
+for user in users:
+   cleaned_user= {
+   id=id(extract_users.py)
+   name=name(extract_users.py)
+
+for josn in jsonplaceholder in json:
+    if json.exists:
+     print("file found")
+    else:
+     print("file found error")
+
+except keyError as error:
+print(error)
+
+logging.warning("file doesn not find the data ")
+
+logging.info("finally run the file")
+
+============================
+import json
+import logging
+import requests
+from pathline import path
+
+# logging configration and debug
+
+logging.basicConfig(
+level=logging.INFO,
+format="%(levelname)s:%(message)s"
+)
+
+
+number= ["10", "25", "abc", "40", "xyz", "50"]
+
+valid_numners=[]
+invalid_numbers=[]
+
+try:
+for num in numbers:
+     num=int(num)
+     valid_numbers.append(num)
+
+except ValueError as error:
+print(error)
+
+
+employees = [
+    {"id":101,"salary":"45000"},
+    {"id":102,"salary":"abc"},
+    {"id":103,"salary":"52000"},
+    {"id":104,"salary":"invalid"}
+]
+
+for emp for employees:
+    try:
+     salary=int(emp["salary"])
+     annual_salary= salary *12
+     print(salary)
+     print(annual_salary)
+
+logging.info("peipeline started)
+logging.error("Reading started")
+logging.info("pipeline finished")
+
+raw_file=path("orders.csv")
+raw_file.exists()
+      print(" file input file")
+else:
+   print("missing input file")
+
+url= "http://jsonplaceholder.typicode.com/posts"
+
+# import requests
+response= resquests.get(url)
+
+# send request for succeeds
+response.raise_for_status()
+
+# Convert response into Python data. 
+# need to save
+data= response.json()
+
+try:
+   
+print("f total posts: {len(data)}") 
+
+except valueerror as error:
+print(error)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
