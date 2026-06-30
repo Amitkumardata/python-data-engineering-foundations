@@ -1,0 +1,18 @@
+12. Guided Mini Project: Order Function Practice
+
+
+clean_name(name)
+clean_email(email)
+is_adult(age)
+is_valid_customer(customer)
+transform_customer(customer)
+
+
+Function to clean customer name
+Function to calculate total
+Function to validate order
+Function to transform one order
+Loop through orders
+Skip invalid orders
+Append cleaned orders
+Print result
